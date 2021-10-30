@@ -1,1 +1,2 @@
-essa e a versao original em c rudmentar
+#MiniERP Versao C
+essa e a versao original em c, estremamente rudmentar
