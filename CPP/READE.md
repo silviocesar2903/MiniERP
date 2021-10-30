@@ -1,2 +1,3 @@
-#MiniERP Versao C++ <h1>
+# MiniERP Versao C++ 
+
 essa e a versao  em c++ baseada na horiginal nao concluida ainda.

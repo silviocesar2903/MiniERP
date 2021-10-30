@@ -1,2 +1,3 @@
-#MiniERP Versao C <h1>
+# MiniERP Versao C
+
 essa e a versao original em c, estremamente rudmentar
