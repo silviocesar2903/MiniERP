@@ -109,7 +109,7 @@ public class Estoque {
             System.out.println("Nome: " + e.produtos.get(i).getNome());
             System.out.println("Descricacao: " + e.produtos.get(i).getDescricao());
             System.out.println("Valor: " + e.produtos.get(i).getValor() + "reais");
-            System.out.println("Quantidade em estoque: " + e.produtos.get(i).getValor() + "reais");
+            System.out.println("Quantidade em estoque: " + e.produtos.get(i).getValor() + " reais");
             System.out.println("---------------------------------------------------------------------------------");
         }
     }

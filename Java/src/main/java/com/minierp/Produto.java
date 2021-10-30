@@ -19,11 +19,11 @@ public class Produto {
     private double valor;
     private int qtdProdutoEstoque;
 
-    public int getId() {
+    private int getId() {
         return id;
     }
 
-    public void setId(int id) {
+    private void setId(int id) {
         this.id = id;
     }
 
