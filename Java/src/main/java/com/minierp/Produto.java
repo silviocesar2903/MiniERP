@@ -17,6 +17,7 @@ public class Produto {
     private String nome;
     private String descricao;
     private double valor;
+    private int qtdProdutoEstoque;
 
     public int getId() {
         return id;
@@ -50,21 +51,32 @@ public class Produto {
         this.valor = valor;
     }
 
+    public int getQtdProdutoEstoque() {
+        return qtdProdutoEstoque;
+    }
+
+    public void setQtdProdutoEstoque(int qtdProdutoEstoque) {
+        this.qtdProdutoEstoque = qtdProdutoEstoque;
+    }
+    
+    
     public Produto() {
         
     }
 
-    public Produto(String nome, String descricao, double valor) {
+    public Produto(String nome, String descricao, double valor, int qtdProduto) {
         this.setId(this.getId() + 1);
         this.nome = nome;
         this.descricao = descricao;
         this.valor = valor;
+        this.qtdProdutoEstoque = qtdProduto;
     }
     
     public Produto cadastrarProduto(Produto p)
     {
         String nome,descricao;
         double valor;
+        int qtd;
         Scanner sc = new Scanner(System.in);
         System.out.println("Por favor insira o nome do produto");
         nome = sc.nextLine();
@@ -72,9 +84,12 @@ public class Produto {
         descricao = sc.nextLine();
         System.out.println("Por favor insira o valor do produto");
         valor = sc.nextDouble();
+        System.out.println("Por favor insira a quantidade de produtos a ser adicionada");
+        qtd = sc.nextInt();
         p.setNome(nome);
         p.setDescricao(descricao);
         p.setValor(valor);
+        p.setQtdProdutoEstoque(qtd);
         p.setId(this.getId() + 1);
         return p;
     }

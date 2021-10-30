@@ -14,12 +14,20 @@ import java.util.List;
  */
 public class Estoque {
     private List<Produto> produtos = new ArrayList<Produto>();
-    private int quantidadeEstoque;
+    private int totalProdutosEstoque;
 
-    public int getQuantidadeEstoque() {
-        this.quantidadeEstoque = this.produtos.size();
-        return this.quantidadeEstoque;
+    public int getTotalProdutosEstoque(Estoque e) {
+        int tProdutosLista, q = 0, res = 0; 
+        for(int i =0; i< e.produtos.size(); i++)
+        {
+            tProdutosLista = e.produtos.size();
+            q += e.produtos.get(i).getQtdProdutoEstoque();
+            res = q * tProdutosLista;
+        }
+        return res;
     }
+    
+    
     
     public Estoque adicionarProduto(Estoque e, Produto p)
     {
@@ -77,6 +85,21 @@ public class Estoque {
         }
         return null;
     }
+    public Produto findProdutoEstoque(Estoque e, String nome)
+    {
+       for(int i =0; i < e.produtos.size(); i++)
+        {
+         if(e.produtos.get(i).getNome().equals(nome))
+         {
+            Produto f = e.produtos.get(i);
+            return f;
+         }else
+         {
+             return null;
+         }
+        }
+        return null;
+    }
     
     public void listarProdutos(Estoque e)
     { 
@@ -86,6 +109,7 @@ public class Estoque {
             System.out.println("Nome: " + e.produtos.get(i).getNome());
             System.out.println("Descricacao: " + e.produtos.get(i).getDescricao());
             System.out.println("Valor: " + e.produtos.get(i).getValor() + "reais");
+            System.out.println("Quantidade em estoque: " + e.produtos.get(i).getValor() + "reais");
             System.out.println("---------------------------------------------------------------------------------");
         }
     }

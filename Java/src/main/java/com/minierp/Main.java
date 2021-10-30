@@ -5,6 +5,9 @@
  */
 package com.minierp;
 
+import java.util.Scanner;
+import com.minierp.Produto;
+
 /**
  *
  * @author silvio
@@ -12,19 +15,58 @@ package com.minierp;
 public class Main {
     public static void main(String []args)
     {
-        Estoque e = new Estoque();
-        Produto p1 = new Produto("Bota", "Calcado", 22.50f);
-        Produto p2 = new Produto("Tenis", "Calcado", 45.50f);
-        Produto p3 = new Produto("Camisa", "Vestuario", 30.00f);
-        Produto p4 = new Produto("Calca", "Vestuario", 22.50f);
-        Produto p5 = new Produto("Bone", "Acessorios", 22.50f);
-        
-        e.adicionarProduto(e, p1);
-        e.adicionarProduto(e, p2);
-        e.adicionarProduto(e, p3);
-        e.adicionarProduto(e, p4);
-        e.adicionarProduto(e, p5);
-        
-        e.listarProdutos(e);
+        menu();        
+    }
+    public static void menu()
+    {
+      Scanner sc = new Scanner(System.in);
+      int op = 0;
+      Produto p = new Produto();
+      Produto t;
+      Estoque e = new Estoque();
+      do 
+      { 
+          op = showMenu();
+            switch(op)
+            {
+                case 1:
+                    p =  p.cadastrarProduto(p);
+                    System.out.println("Produto Cadastrado com sucesso");
+                    break;
+                case 2:
+                    e = e.adicionarProduto(e, p);
+                    System.out.println("Produto adicinado ao estoque com sucesso");
+                    break;
+                case 3:
+                    String nome;
+                    System.out.println("Por favor digite o nome do produto que deseja encomtrar");
+                    nome = sc.nextLine();
+                    t = e.findProdutoEstoque(e, nome);
+                    break;
+                case 4:
+                    e.listarProdutos(e);
+                    break;
+                case 5:
+                    System.out.println("Aplicacao esta encerrando...");
+                    break;
+
+            }
+            t = null;
+      }while(op != 5);
+
+    }
+    
+    public static int showMenu()
+    {
+      int op =0;
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Bem vido ao sistema mini ERP as opções sao:");
+      System.out.println("1 - Cadastrar Produto");
+      System.out.println("2 - Adicionar Produto ao Estoque");
+      System.out.println("3 - Procurar Produto no Estoque");
+      System.out.println("4 - Listar Produtos em Estoque");
+      System.out.println("5 - Sair da Aplicação");
+      op = sc.nextInt();
+      return op;
     }
 }
