@@ -5,4 +5,4 @@ mim com o obejtivo de exercitar a pratica de programação não espere nenhum co
 não aceito pedidos de modificação de código para esse projeto pois sendo de cunho pessoal
 quero manter apenas codigo que eu escrever para poder treinar
 
-este repositorio contem codigos C, C++ e JAVA os codigos C e C++ podem nao estarem perfeitos pois nao sou espeacialista
+este repositorio contem codigos C, C++ e JAVA os codigos C e C++ podem nao estar perfeitos pois nao sou espeacialista
