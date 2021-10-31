@@ -17,14 +17,15 @@ public class Estoque {
     private int totalProdutosEstoque;
 
     public int getTotalProdutosEstoque(Estoque e) {
-        int tProdutosLista, q = 0, res = 0; 
+        int tProdutosLista = 0, q = 0; 
         for(int i =0; i< e.produtos.size(); i++)
         {
-            tProdutosLista = e.produtos.size();
             q += e.produtos.get(i).getQtdProdutoEstoque();
-            res = q * tProdutosLista;
+            
         }
-        return res;
+        this.totalProdutosEstoque = q * tProdutosLista;
+        tProdutosLista = e.produtos.size();
+        return this.totalProdutosEstoque;
     }
     
     
