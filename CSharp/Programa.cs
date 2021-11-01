@@ -55,8 +55,8 @@ namespace MiniERP
             Console.WriteLine("3 - Procurar Produto no Estoque");
             Console.WriteLine("4 - Listar Produtos em Estoque");
             Console.WriteLine("5 - Sair da Aplicação");
-            Console.Read();
-            op = Console.Read();
+            //Console.Read();
+            op = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(op);
             return op;
         }

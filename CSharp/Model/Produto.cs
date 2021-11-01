@@ -81,7 +81,7 @@ namespace MiniERP.Model
             Console.WriteLine("Por favor insira o valor do produto");
             valor = Double.Parse(Console.ReadLine());
             Console.WriteLine("Por favor insira a quantidade de produtos a ser adicionada");
-            qtd = Console.Read();
+            qtd = Integer.Parse(Console.ReadLine());
             p.setNome(nome);
             p.setDescricao(descricao);
             p.setValor(valor);

@@ -91,7 +91,7 @@ namespace MiniERP.Model
             Console.WriteLine("---------------------------------------------------------------------------------");
             Console.WriteLine("Nome: " + p.getNome());
             Console.WriteLine("Descricacao: " + p.getDescricao());
-            Console.WriteLine("Valor: " + p.getValor() + "reais");
+            Console.WriteLine("Valor: " + p.getValor() + " reais");
             Console.WriteLine("Quantidade em estoque: " + p.getQtdProdutoEstoque());
             Console.WriteLine("---------------------------------------------------------------------------------");
         }
